@@ -1,6 +1,8 @@
 index = 0
 stadiums = []
 
+commafy = d3.format(',')
+
 render = ->
   info = d3.select '.js-stadium'
 
@@ -25,11 +27,44 @@ render = ->
     data.permalink = data.stadium.toLowerCase().replace(/\s+/g, '-')
     data
 
-  inspect = (stadium) ->
-    info.html "
-      <a href='http://maps.google.com/maps?t=k&q=#{stadium.stadium}'>
-        #{stadium.stadium}<span class='team'>#{stadium.team}</span>
-      </a>"
+  inspect = (stadium, index) ->
+    info.html('').datum(stadium)
+
+    info.append('h3')
+      .attr('class', 'title')
+      .html((d) -> "
+      <a href='http://maps.google.com/maps?t=k&q=#{d.stadium}'>
+        <span>#{d.stadium}</span><span class='idx'>#{index}</span>
+      </a>")
+
+    info.append('span')
+      .attr('class', 'row')
+      .html((d) -> "<em>Team:</em><span>#{d.team}</span>")
+
+    info.append('span')
+      .attr('class', 'row')
+      .html((d) -> "<em>Conference:</em><span>#{d.conference}</span>")
+
+    info.append('span')
+      .attr('class', 'row')
+      .html((d) -> "<em>Capacity:</em><span>(##{d.capacityRank}) #{commafy(d.capacity)}</span>")
+
+    info.append('span')
+      .attr('class', 'row')
+      .html((d) -> "<em>Record:</em><span>#{commafy(d.record)}</span>")
+
+    info.append('span')
+      .attr('class', 'row')
+      .html((d) -> "<em>Built:</em><span>#{d.built}</span>")
+
+    info.append('span')
+      .attr('class', 'row')
+      .html((d) -> "<em>Expanded:</em><span>#{d.expanded}</span>")
+
+    # info.html "
+    #   <a href='http://maps.google.com/maps?t=k&q=#{stadium.stadium}'>
+    #     #{stadium.stadium}<span class='team'>#{stadium.team}</span>
+    #   </a>"
 
     console.log stadium
 
@@ -45,21 +80,32 @@ render = ->
 
     index = idx
     stadium = stadiums[idx]
-    inpsect stadium
+    inspect stadium, idx
     map.flyTo [stadium.lat, stadium.lon], 17.0
 
 
   d3.csv 'data/schools.csv', format, (err, data) ->
-    data.sort (a, b) -> d3.descending(a.conference, b.conference)
-    stadiums = data
-    debugindex = document.location.search.match(/index=([0-9]+)/i)[1]
 
-    if debugindex
+    data.sort (a, b) -> d3.descending(a.capacity, b.capacity)
+    stadium.capacityRank = index + 1 for stadium, index in data
+    capacity = d3.extent data, (d) -> d.capacity
+
+    data.sort (a, b) -> d3.descending(a.record, b.record)
+    stadium.recordRank = index + 1 for stadium, index in data
+    record = d3.extent data, (d) -> d.record
+
+    data.sort (a, b) -> d3.descending(a.conference, b.conference)
+
+    stadiums = data
+    debugindex = document.location.search.match(/index=([0-9]+)/i)
+
+    if debugindex and debugindex = parseInt(debugindex[1])
       stadium = stadiums[debugindex]
-      inspect stadium
+      inspect stadium, debugindex
+      index = debugindex
       map.setCenter [stadium.lat, stadium.lon]
       map.setZoom 16.5
-      return
+      #return
 
     document.addEventListener 'keyup', navigateToStadium
 

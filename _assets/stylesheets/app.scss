@@ -12,16 +12,51 @@ body {
   -webkit-filter: saturate(1.0) brightness(1.0) contrast(1.0);
 }
 
+
+// Info panels
+//-----------------------------
 .stadium {
-  padding: 20px;
   position: absolute;
   left: 10px;
   top: 10px;
   z-index: 9999;
-  background: #fff;
-}
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  min-width: 200px;
 
-.team {
-  display: block;
-  color: red;
+  .title {
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+
+    a {
+      color: orange;
+      text-decoration: none;
+    }
+  }
+
+  .idx {
+    float: right;
+    margin-left: 10px;
+  }
+
+  .row {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    em {
+      font-weight: bold;
+      color: #999;
+    }
+
+    span {
+      color: #ddd;
+      float: right;
+    }
+  }
 }
