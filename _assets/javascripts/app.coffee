@@ -82,6 +82,7 @@ render = ->
     stadium = stadiums[idx]
     inspect stadium, idx
     map.flyTo [stadium.lat, stadium.lon], 17.0
+    history.pushState({}, "", "?index=#{idx}")
 
 
   d3.csv 'data/schools.csv', format, (err, data) ->
