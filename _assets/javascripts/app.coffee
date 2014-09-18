@@ -58,7 +58,7 @@ render = ->
       stadium = stadiums[debugindex]
       inspect stadium
       map.setCenter [stadium.lat, stadium.lon]
-      map.setZoom 16
+      map.setZoom 16.5
       return
 
     document.addEventListener 'keyup', navigateToStadium

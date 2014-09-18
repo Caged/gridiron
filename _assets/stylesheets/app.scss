@@ -8,6 +8,10 @@ body {
   height: 100vh;
 }
 
+.mapboxgl-canvas {
+  -webkit-filter: saturate(1.0) brightness(1.0) contrast(1.0);
+}
+
 .stadium {
   padding: 20px;
   position: absolute;
