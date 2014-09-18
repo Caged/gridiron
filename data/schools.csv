@@ -1,5 +1,5 @@
 stadium,city,state,team,conference,capacity,record,built,expanded,place_gid,statefp,placefp,alt,name,lon,lat
-Aggie Memorial Stadium,Las Cruces,NM,New Mexico State,Independent,30343,32993,1978,2005,5245,35,39380,"",Las Cruces,-106.789465591451,32.3266387938946
+Aggie Memorial Stadium,Las Cruces,NM,New Mexico State,Independent,30343,32993,1978,2005,5245,35,39380,"",Las Cruces,-106.74109247744845,32.27963276539545
 Alamodome,San Antonio,TX,UTSA,C-USA,65000,56743,1993,,6187,48,65000,Texas-San Antonio,San Antonio,-98.524676348632,29.4721475314174
 Aloha Stadium,Honolulu,HI,Hawaii,Mountain West,50000,50000,1975,2003,1781,15,71550,"",Urban Honolulu,-157.92997284653285,21.372819538137335
 Alumni Stadium,Chestnut Hill,MA,Boston College,ACC,44500,44500,1957,1995,22387,25,7000,"",Boston,-71.166033,42.334776
@@ -55,12 +55,12 @@ Jones AT&T Stadium,Lubbock,TX,Texas Tech,Big 12,60862,60879,1947,2013,6691,48,45
 Jordan–Hare Stadium,Auburn,AL,Auburn,SEC,87451,87451,1939,2004,3112,1,3076,"",Auburn,-85.48913199474062,32.60222563439733
 Kelly/Shorts Stadium,Mount Pleasant,MI,Central Michigan,MAC,30199,30302,1972,1997,15137,26,56020,"",Mount Pleasant,-84.77083987649056,43.57763763930771
 Kenan Memorial Stadium,Chapel Hill,NC,North Carolina,ACC,62980,62000,1927,2011,24658,37,11800,"",Chapel Hill,-79.0385952571901,35.9269415338483
-Kibbie Dome,Moscow,ID,Idaho,Independent,16000,17600,1975,,1874,16,54550,"",Moscow,-116.998988443762,46.7306063679776
+Kibbie Dome,Moscow,ID,Idaho,Independent,16000,17600,1975,,1874,16,54550,"",Moscow,-117.01789493926941,46.726298645619266
 Kinnick Stadium,Iowa City,IA,Iowa,Big Ten,70585,70585,1929,2006,13064,19,38595,"",Iowa City,-91.5305897317142,41.655785074614
 Kyle Field,College Station,TX,Texas A&M,SEC,106511,104728,1927,2007,6132,48,15976,"",College Station,-96.340172,30.610197
 Ladd Peebles Stadium,Mobile,AL,South Alabama,Sun Belt,40646,26783,1948,2009,3074,1,50000,"",Mobile,-88.07560041923283,30.67306326889053
 Lane Stadium,Blacksburg,VA,Virginia Tech,ACC,66233,66233,1965,2005,28137,51,7784,"",Blacksburg,-80.41803878237648,37.22000193486336
-LaVell Edwards Stadium,Provo,UT,BYU,Independent,63725,66247,1964,1982,20327,49,62470,Brigham Young,Provo,-111.645715852267,40.2457185295863
+LaVell Edwards Stadium,Provo,UT,BYU,Independent,63725,66247,1964,1982,20327,49,62470,Brigham Young,Provo,-111.65452929930305,40.257541917958406
 Legion Field,Birmingham,AL,UAB,C-USA,71594,44669,1926,1991,3483,1,7000,"",Birmingham,-86.7988137611707,33.5275697987521
 Liberty Bank Stadium,Jonesboro,AR,Arkansas State,Sun Belt,30964,31243,1974,2002,9971,5,35710,"",Jonesboro,-90.66718201150054,35.84891959893929
 Liberty Bowl Memorial Stadium,Memphis,TN,Memphis,American,62380,65885,1965,1987,5981,47,48000,"",Memphis,-89.9789060941234,35.1046294996226
@@ -78,10 +78,10 @@ Mercedes-Benz Superdome,New Orleans,LA,Tulane,C-USA,69703,79651,1975,2006,4639,2
 Blaik Field at Michie Stadium,West Point,NY,Army,Independent,38000,42765,1924,2001,24322,36,80747,"",West Point,-73.96413176756496,41.38755893351578
 Michigan Stadium,Ann Arbor,MI,Michigan,Big Ten,109901,115109,1927,2010,14961,26,3000,"",Ann Arbor,-83.7311437743066,42.2756814226425
 Mountaineer Field at Milan Puskar Stadium,Morgantown,WV,West Virginia,Big 12,60000,70222,1980,2004,28584,54,55756,"",Morgantown,-79.9463573070938,39.6377407542909
-Navy–Marine Corps Memorial Stadium,Annapolis,MD,Navy,Independent,34000,37970,1959,2005,21918,24,1600,"",Annapolis,-76.5058873208302,38.9695557911377
+Navy–Marine Corps Memorial Stadium,Annapolis,MD,Navy,Independent,34000,37970,1959,2005,21918,24,1600,"",Annapolis,-76.50709062691315,38.98477306134845
 Neyland Stadium,Knoxville,TN,Tennessee,SEC,102455,109061,1921,2009,27773,47,40000,"",Knoxville,-83.925581,35.9547814
 Nippert Stadium,Cincinnati,OH,Cincinnati,American,35097,36007,1924,2005,18785,39,15000,"",Cincinnati,-84.5060004450558,39.1411747122896
-Notre Dame Stadium,Notre Dame,IN,Notre Dame,Independent,80795,80795,1930,1997,12580,18,55386,"",Notre Dame,-86.2378152415929,41.7012343468942
+Notre Dame Stadium,Notre Dame,IN,Notre Dame,Independent,80795,80795,1930,1997,12580,18,55386,"",Notre Dame,-86.23390469527823,41.69838308702634
 Ohio Stadium,Columbus,OH,Ohio State,Big Ten,102329,106102,1922,2001,25201,39,18000,"",Columbus,-82.9851806970651,39.9859631232037
 Papa John's Cardinal Stadium,Louisville,KY,Louisville,American,56000,55386,1998,2010,14486,21,48006,"",Louisville/Jefferson County metro government (balance),-85.6664099995046,38.177768992113
 Peden Stadium,Athens,OH,Ohio,MAC,24000,25893,1929,2001,25351,39,2736,"",Athens,-82.10294383084155,39.32102134279734
