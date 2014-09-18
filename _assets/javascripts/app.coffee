@@ -43,6 +43,10 @@ render = ->
 
     info.append('span')
       .attr('class', 'row')
+      .html((d) -> "<em>Location:</em><span>#{d.city}, #{d.state}</span>")
+
+    info.append('span')
+      .attr('class', 'row')
       .html((d) -> "<em>Conference:</em><span>#{d.conference}</span>")
 
     info.append('span')
@@ -81,12 +85,13 @@ render = ->
     index = idx
     stadium = stadiums[idx]
     inspect stadium, idx
-    map.flyTo [stadium.lat, stadium.lon], 17.0
+    map.setCenter [stadium.lat, stadium.lon]
+    map.setZoom 17.0
     history.pushState({}, "", "?index=#{idx}")
 
 
   d3.csv 'data/schools.csv', format, (err, data) ->
-
+    console.log data.length
     data.sort (a, b) -> d3.descending(a.capacity, b.capacity)
     stadium.capacityRank = index + 1 for stadium, index in data
     capacity = d3.extent data, (d) -> d.capacity
