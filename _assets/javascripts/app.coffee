@@ -2,6 +2,8 @@ index = 0
 stadiums = []
 
 render = ->
+  info = d3.select '.js-stadium'
+
   mapboxgl.accessToken = 'pk.eyJ1IjoiY2FnZWQiLCJhIjoiQjd2aXNGYyJ9.gr1QeGYwG1QYUW47I-DqaQ'
   map = new mapboxgl.Map
     container: 'js-map'
@@ -23,6 +25,14 @@ render = ->
     data.permalink = data.stadium.toLowerCase().replace(/\s+/g, '-')
     data
 
+  inspect = (stadium) ->
+    info.html "
+      <a href='http://maps.google.com/maps?t=k&q=#{stadium.stadium}'>
+        #{stadium.stadium}<span class='team'>#{stadium.team}</span>
+      </a>"
+
+    console.log stadium
+
   navigateToStadium = (event) ->
     idx = index
     if event.keyCode is 37
@@ -35,13 +45,22 @@ render = ->
 
     index = idx
     stadium = stadiums[idx]
-    console.log stadium
-    map.flyTo [stadium.lat, stadium.lon], 17.5
+    inpsect stadium
+    map.flyTo [stadium.lat, stadium.lon], 17.0
 
 
   d3.csv 'data/schools.csv', format, (err, data) ->
     data.sort (a, b) -> d3.descending(a.conference, b.conference)
     stadiums = data
+    debugindex = document.location.search.match(/index=([0-9]+)/i)[1]
+
+    if debugindex
+      stadium = stadiums[debugindex]
+      inspect stadium
+      map.setCenter [stadium.lat, stadium.lon]
+      map.setZoom 16
+      return
+
     document.addEventListener 'keyup', navigateToStadium
 
 document.addEventListener 'DOMContentLoaded', render

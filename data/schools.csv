@@ -2,7 +2,7 @@ stadium,city,state,team,conference,capacity,record,built,expanded,place_gid,stat
 Aggie Memorial Stadium,Las Cruces,NM,New Mexico State,Independent,30343,32993,1978,2005,5245,35,39380,"",Las Cruces,-106.789465591451,32.3266387938946
 Alamodome,San Antonio,TX,UTSA,C-USA,65000,56743,1993,,6187,48,65000,Texas-San Antonio,San Antonio,-98.524676348632,29.4721475314174
 Aloha Stadium,Honolulu,HI,Hawaii,Mountain West,50000,50000,1975,2003,1781,15,71550,"",Urban Honolulu,-157.844003403402,21.3302641500588
-Alumni Stadium,Chestnut Hill,MA,Boston College,ACC,44500,44500,1957,1995,22387,25,7000,"",Boston,-71.0904719626893,42.3157888477487
+Alumni Stadium,Chestnut Hill,MA,Boston College,ACC,44500,44500,1957,1995,22387,25,7000,"",Boston,-71.166033,42.334776
 Amon G. Carter Stadium,Fort Worth,TX,TCU,Big 12,45000,50307,1929,2012,6595,48,27000,"",Fort Worth,-97.3468916971708,32.7805501449469
 Apogee Stadium,Denton,TX,North Texas,C-USA,30850,28075,2011,,6948,48,19972,"",Denton,-97.1412438691852,33.2156160402052
 Arizona Stadium,Tucson,AZ,Arizona,Pac-12,51811,59920,1928,1988,3663,4,77000,"",Tucson,-110.87708548442,32.1567244523657
@@ -58,8 +58,8 @@ Kenan Memorial Stadium,Chapel Hill,NC,North Carolina,ACC,62980,62000,1927,2011,2
 Kibbie Dome,Moscow,ID,Idaho,Independent,16000,17600,1975,,1874,16,54550,"",Moscow,-116.998988443762,46.7306063679776
 Kinnick Stadium,Iowa City,IA,Iowa,Big Ten,70585,70585,1929,2006,13064,19,38595,"",Iowa City,-91.5305897317142,41.655785074614
 Kyle Field,College Station,TX,Texas A&M,SEC,82589,90079,1927,2007,6132,48,15976,"",College Station,-96.2957964863652,30.5866549612322
-Ladd Peebles Stadium,Mobile,AL,South Alabama,Sun Belt,40646,26783,1948,2009,3074,1,50000,"",Mobile,-88.1199244235991,30.6767209215264
-Lane Stadium,Blacksburg,VA,Virginia Tech,ACC,66233,66233,1965,2005,28137,51,7784,"",Blacksburg,-80.4276855786503,37.229945832372
+Ladd Peebles Stadium,Mobile,AL,South Alabama,Sun Belt,40646,26783,1948,2009,3074,1,50000,"",Mobile,-88.07560041923283,30.67306326889053 
+Lane Stadium,Blacksburg,VA,Virginia Tech,ACC,66233,66233,1965,2005,28137,51,7784,"",Blacksburg,-80.41803878237648,37.22000193486336
 LaVell Edwards Stadium,Provo,UT,BYU,Independent,63725,66247,1964,1982,20327,49,62470,Brigham Young,Provo,-111.645715852267,40.2457185295863
 Legion Field,Birmingham,AL,UAB,C-USA,71594,44669,1926,1991,3483,1,7000,"",Birmingham,-86.7988137611707,33.5275697987521
 Liberty Bank Stadium,Jonesboro,AR,Arkansas State,Sun Belt,30964,31243,1974,2002,9971,5,35710,"",Jonesboro,-90.6794991660617,35.8208121537089
@@ -102,7 +102,7 @@ Rynearson Stadium,Ypsilanti,MI,Eastern Michigan,MAC,30200,26188,1969,1992,14967,
 Sam Boyd Stadium,Whitney,NV,UNLV,Mountain West,36800,44615,1971,1999,2104,32,83800,"",Whitney,-115.038051432685,36.1004106203298
 Sanford Stadium,Athens,GA,Georgia,SEC,92746,92746,1929,2004,8577,13,3440,"",Athens-Clarke County unified government (balance),-83.3689417421889,33.9508170657489
 Scheumann Stadium,Muncie,IN,Ball State,MAC,22500,23861,1967,2007,12075,18,51876,"",Muncie,-85.3942940108385,40.1987098311956
-Scott Stadium,Charlottesville,VA,Virginia,ACC,61500,64947,1931,2000,27958,51,14968,"",Charlottesville,-78.4855727100689,38.0374240623968
+Scott Stadium,Charlottesville,VA,Virginia,ACC,61500,64947,1931,2000,27958,51,14968,"",Charlottesville,-78.5136741891846,38.03107041062373
 Skelly Field at H. A. Chapman Stadium,Tulsa,OK,Tulsa,C-USA,35542,47350,1930,2005,19211,40,75000,"",Tulsa,-95.9036195659843,36.1284213260081
 Sonny Lubick Field at Hughes Stadium,Fort Collins,CO,Colorado State,Mountain West,34400,39107,1968,2006,10192,8,27425,"",Fort Collins,-105.06586581365,40.5487667248842
 Spartan Stadium,East Lansing,MI,Michigan State,Big Ten,75005,80401,1923,2005,14934,26,24120,"",East Lansing,-84.4834139374642,42.748380458519

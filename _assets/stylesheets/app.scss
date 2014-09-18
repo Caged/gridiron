@@ -1,6 +1,23 @@
 //= require reset
+body {
+  font: 12px Helvetica Neue;
+}
 
 .map {
   width: 100vw;
   height: 100vh;
+}
+
+.stadium {
+  padding: 20px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 9999;
+  background: #fff;
+}
+
+.team {
+  display: block;
+  color: red;
 }
