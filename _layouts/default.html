@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.2.2/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.2.2/mapbox-gl.js'></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+  {{ 'app' | stylesheet }}
+  {{ 'app' | javascript }}
+</head>
+<body>
+  <div class="page-content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </div>
+</body>
+</html>

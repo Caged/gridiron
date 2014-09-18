@@ -1,0 +1,16 @@
+# Site settings
+title: Gridiron
+description: Where college football is played
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://labratrevenge.com/gridiron" # the base hostname & protocol for your site
+twitter_username: Caged
+github_username:  Caged
+
+# Build settings
+markdown: kramdown
+
+assets:
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/bower_components
