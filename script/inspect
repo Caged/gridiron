@@ -1,39 +1,50 @@
 #!/usr/bin/env ruby
 
 require 'sparql/client'
+require 'csv'
 require 'pp'
 
-q4 = <<-EOS
+query = <<-EOS
 PREFIX dbpedia2: <http://dbpedia.org/property/>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 
-SELECT ?org ?team ?conference ?label ?color1 ?color2 ?capacity ?firstseason ?headcoach ?stadium ?stadiumlabel ?hclabel
+SELECT ?org ?team ?name ?conference ?label ?color1 ?color2 ?capacity ?firstseason ?headcoach ?stadium ?stadiumlabel ?hclabel ?location
 WHERE {
   ?org skos:broader <http://dbpedia.org/resource/Category:NCAA_Division_I_FBS_football_teams> .
   ?team dcterms:subject ?org .
   ?team rdfs:label ?label .
   ?team dbpedia2:conferencedisplay ?conference .
-  ?team dbpedia2:color1hex ?color1 .
-  ?team dbpedia2:color2hex ?color2 .
   ?team dbpedia2:stadcapacity ?capacity .
   ?team dbpedia2:headcoachdisplay ?headcoach .
   ?team dbpedia2:stadium ?stadium .
   ?team dbpedia2:firstyear ?firstseason .
+  ?team dbpprop:location ?location .
+  OPTIONAL { ?team dbpedia2:color1hex ?color1 }
+  OPTIONAL { ?team dbpedia2:color2hex ?color2 }
   OPTIONAL { ?headcoach rdfs:label ?hclabel }
   OPTIONAL { ?stadium foaf:name ?stadiumlabel }
   FILTER(LANG(?label) = 'en' and regex(str(?team), "[_football]$") and xsd:integer(?capacity) > 0)
 }
 EOS
 
-require 'sparql/client'
+schools = []
+curschools = CSV.read('data/schools.csv', :headers => true)
+
 client = SPARQL::Client.new('http://dbpedia.org/sparql')
-results = client.query(q4)
+results = client.query(query)
 
 results.each_solution do |sol|
   out = {}
   sol.each_binding do |key, val|
-    next if [:org, :team].include?(key)
+    #next if [:org, :team].include?(key)
     out[key] = val.to_s
   end
-  puts out
+  schools << out
+end
+
+schools.each do |row|
+  detected = curschools.detect { |s| s['stadium'] == row[:stadium] }
+  if !detected
+    pp row
+  end
 end
