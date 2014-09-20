@@ -22,7 +22,7 @@ body {
   z-index: 9999;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
-  min-width: 200px;
+  min-width: 250px;
 
   .title {
     font-weight: bold;
@@ -54,9 +54,75 @@ body {
       color: #999;
     }
 
-    span {
+    .val {
       color: #ddd;
       float: right;
+    }
+
+    svg {
+      margin-top: 15px;
+      display: block;
+    }
+
+    text {
+      fill: #999;
+      font-size: 10px;
+    }
+
+    .built {
+      fill: orange;
+    }
+
+    .expanded {
+      fill: #2cd422;
+    }
+
+    .backing {
+      fill: #fff;
+      fill-opacity: 0.2;
+    }
+
+    .domain {
+      fill: none;
+    }
+
+    .tick {
+      line {
+        stroke: #666;
+        shape-rendering: crispedges;
+        stroke-width: 0.5;
+      }
+
+      text {
+        font-size: 10px;
+        fill: #555;
+      }
+    }
+
+    .legend {
+      display: block;
+      line-height: 1;
+
+      .built {
+        margin-right: 10px;
+      }
+
+      .built:before,
+      .expanded:before {
+        content: "\2022";
+        font-size: 30px;
+        vertical-align: -7px;
+        margin-right: 3px;
+        line-height: 10px;
+      }
+
+      .built:before {
+        color: orange;
+      }
+
+      .expanded:before {
+        color: #2cd422;
+      }
     }
   }
 }
