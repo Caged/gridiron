@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require 'csv'
+require 'pp'
+
+curdata = CSV.read('data/schools.csv', :headers => true)
+newdata = CSV.read('data/wikidata.csv', :headers => true)
+
+combined_headers = curdata.headers + ['nickname', 'first_played', 'joined_fbs']
+combined = CSV.open('data/combined.csv', 'w', :headers => combined_headers, :write_headers => true)
+
+curdata.each do |row|
+  obj = newdata.detect {|school| school['team'] == row['team']}
+  #puts obj.to_a.inspect
+  combined << (row.fields + [obj['nickname'], obj['first_played'], obj['joined_fbs']])
+end
