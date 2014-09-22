@@ -20,14 +20,14 @@ body {
   left: 10px;
   top: 10px;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.8);
   color: #fff;
   min-width: 250px;
 
   .title {
     font-weight: bold;
+    font-size: 16px;
     padding: 10px;
-    border-bottom: 1px solid #444;
+    background: rgba(0, 0, 0, 0.8);
 
     a {
       color: orange;
@@ -77,6 +77,14 @@ body {
       fill: #2cd422;
     }
 
+    .capacity {
+      fill: dodgerblue;
+    }
+
+    .record {
+      fill: hotpink;
+    }
+
     .backing {
       fill: #fff;
       fill-opacity: 0.2;
@@ -88,9 +96,9 @@ body {
 
     .tick {
       line {
-        stroke: #666;
+        stroke: #555;
         shape-rendering: crispedges;
-        stroke-width: 0.5;
+        stroke-width: 1;
       }
 
       text {
@@ -108,12 +116,19 @@ body {
       }
 
       .built:before,
-      .expanded:before {
+      .expanded:before,
+      .capacity:before,
+      .record:before {
         content: "\2022";
         font-size: 30px;
         vertical-align: -7px;
         margin-right: 3px;
         line-height: 10px;
+      }
+
+      .expanded,
+      .record {
+        float: right;
       }
 
       .built:before {
@@ -122,6 +137,14 @@ body {
 
       .expanded:before {
         color: #2cd422;
+      }
+
+      .capacity:before {
+        color: dodgerblue;
+      }
+
+      .record:before {
+        color: hotpink;
       }
     }
   }
