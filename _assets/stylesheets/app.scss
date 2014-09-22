@@ -148,4 +148,18 @@ body {
       }
     }
   }
+
+  .logo {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .logo-image {
+    max-height: 50px;
+  }
+
+  .logo-label {
+    display: block;
+    font-weight: bold;
+  }
 }
