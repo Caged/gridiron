@@ -31,56 +31,11 @@ render = ->
     data.permalink = data.stadium.toLowerCase().replace(/\s+/g, '-')
     data
 
-  inspect = (stadium, index) ->
-    info.html('').datum(stadium)
-
-    info.append('h3')
-      .attr('class', 'title')
-      .html((d) -> "
-      <a href='http://maps.google.com/maps?t=k&q=#{d.stadium}'>
-        <span>#{d.stadium}</span><span class='idx'>#{index}</span>
-      </a>")
-
-    info.append('span')
-      .attr('class', 'row')
-      .html((d) -> "<em>Team:</em><span class='val'>#{d.team} #{d.nickname}</span>")
-
-    info.append('span')
-      .attr('class', 'row')
-      .html((d) -> "<em>Location:</em><span class='val'>#{d.city}, #{d.state}</span>")
-
-    info.append('span')
-      .attr('class', 'row')
-      .html((d) -> "<em>Conference:</em><span class='val'>#{d.conference}</span>")
-
-    capacity = info.append('span')
-      .attr('class', 'row')
-      .html((d) -> "<em>Capacity:</em><span class='val'>#{commafy(d.capacity)}</span>")
-
-    record = info.append('span')
-      .attr('class', 'row')
-      .html((d) -> "<em>Record:</em><span class='val'>#{commafy(d.record)}</span>")
-
-    if stadium.joined_fbs
-      info.append('span')
-        .attr('class', 'row')
-        .html((d) -> "<em>Joined FBS:</em><span class='val'>#{d.joined_fbs}</span>")
-
-    built = info.append('span')
-      .attr('class', 'row')
-
-    built.append('span')
-      .attr('class', 'legend')
-      .html((d) -> "
-        <span class='built'><em>Built:</em> <span>#{d.built}</span></span>
-        <span class='expanded'><em>Expanded:</em> <span>#{if d.expanded is 0 then 'n/a' else d.expanded}</span></span>
-      ")
-
+  rangeChart = (container, extent, data, formatter) ->
     m = t: 0, r: 30, b: 20, l: 30
-    width = parseInt(info.style('width')) - m.l - m.r
+    width = parseInt(container.style('width')) - m.l - m.r
     height = 30 - m.t - m.b
-    max = Math.max builtExtent[1], expandedExtent[1]
-    min = Math.min builtExtent[0], expandedExtent[0]
+    [min, max] = extent
 
     x = d3.scale.linear()
       .domain([min, max])
@@ -89,9 +44,9 @@ render = ->
     xax = d3.svg.axis().scale(x)
       .ticks(4)
       .tickSize(height)
-      .tickFormat((d) -> d.toString().substring(2))
+      .tickFormat(formatter)
 
-    vis = built.append('svg')
+    vis = container.append('svg')
       .attr('width', width + m.l + m.r)
       .attr('height', height + m.t + m.b)
     .append('g')
