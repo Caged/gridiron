@@ -3,6 +3,8 @@ body {
   font: 12px Helvetica Neue;
 }
 
+
+
 .map {
   width: 100vw;
   height: 100vh;
@@ -28,39 +30,31 @@ body {
     font-size: 16px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.8);
-
-    a {
-      color: orange;
-      text-decoration: none;
-    }
+    color: orange;
   }
 
-  .idx {
-    float: right;
-    margin-left: 10px;
+  .team-name {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 10px 10px 10px;
+  }
+
+  .team-location {
+    display: block;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+
+  .range-chart {
+    display: block;
+    background: rgba(0, 0, 0, 0.8);
   }
 
   .row {
-    display: block;
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-    &:last-child {
-      border-bottom: 0;
-    }
-
-    em {
-      font-weight: bold;
-      color: #999;
-    }
-
-    .val {
-      color: #ddd;
-      float: right;
-    }
-
     svg {
-      margin-top: 15px;
       display: block;
     }
 
